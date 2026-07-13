@@ -1,0 +1,336 @@
+
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #06b6d4;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --dark-color: #1f2937;
+    --light-bg: #f8fafc;
+    --text-dark: #374151;
+    --text-light: #6b7280;
+    --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light-bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: var(--success-color);
+}
+
+/* Results Section */
+.results-section {
+    padding: 60px 0;
+}
+
+.results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.results-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.results-subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+/* Result Cards */
+.result-card {
+    background: white;
+    border-radius: 25px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.prediction-result {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.prediction-result.tumor {
+    background: var(--gradient-danger);
+    color: white;
+}
+
+.prediction-result.no-tumor {
+    background: var(--gradient-success);
+    color: white;
+}
+
+.result-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.result-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.result-confidence {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.patient-info {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: 15px;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-content h6 {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.info-content p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+/* Image Display */
+.image-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.mri-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.image-info {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Technical Details */
+.tech-details {
+    background: var(--light-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.tech-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-item {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tech-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+}
+
+.tech-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-primary-custom {
+    background: var(--gradient-bg);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Warning Notice */
+.warning-notice {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid var(--warning-color);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.warning-icon {
+    font-size: 3rem;
+    color: var(--warning-color);
+    margin-bottom: 1rem;
+}
+
+.warning-title {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.warning-text {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Progress Bar Animation */
+.progress-container {
+    margin: 2rem 0;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 10px;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--gradient-bg);
+    height: 100%;
+    border-radius: 10px;
+    animation: progressAnimation 2s ease-in-out;
+}
+
+@keyframes progressAnimation {
+    from { width: 0%; }
+    to { width: 97%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-title { font-size: 2rem; }
+    .result-text { font-size: 2rem; }
+    .result-card { padding: 1.5rem; }
+    .tech-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .btn-primary-custom, .btn-outline-custom { 
+        display: block; 
+        margin: 10px 0; 
+        width: 100%;
+    }
+}
